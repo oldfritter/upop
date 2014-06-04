@@ -23,7 +23,7 @@ module Upop
       options = {'version' => '1.0.0', 'charset' => 'UTF-8', 'transType' => '01', 'merAbbr' => Upop.store_name}.merge(Utils.stringify_keys(options))
       check_required_options options, DESKTOP_PAYMENT_INQUIRE
       
-      uri = URI.parse Upop.UPOP_TRADE_URL + "/UpopWeb/api/Query.action"
+      uri = URI.parse Upop.UPOP_QUERY_URL + "/UpopWeb/api/Query.action"
       http = Net::HTTP.new uri.host, uri.port
       http.use_ssl = true if uri.scheme == 'https'
       request = Net::HTTP::Post.new uri.request_uri

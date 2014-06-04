@@ -12,5 +12,6 @@ module Upop
     attr_accessor :store_name
     attr_accessor :key
     attr_accessor :UPOP_TRADE_URL
+    attr_accessor :UPOP_QUERY_URL
   end
 end
