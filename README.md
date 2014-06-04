@@ -26,7 +26,7 @@ $ bundle install
   Upop.store_no = '105550149170027' # Your store NO.
   Upop.store_name = '上海一树网络科技有限公司' # Your company name.
   Upop.key = '88888888' # Your key.
-  self.UPOP_TRADE_URL = 'https://besvr.unionpaysecure.com'
+  self.UPOP_TRADE_URL = 'https://unionpaysecure.com'
   self.UPOP_QUERY_URL = 'https://query.unionpaysecure.com'
 ```
 
