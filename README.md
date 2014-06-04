@@ -26,7 +26,8 @@ $ bundle install
   Upop.store_no = '105550149170027' # Your store NO.
   Upop.store_name = '上海一树网络科技有限公司' # Your company name.
   Upop.key = '88888888' # Your key.
-  Upop.UPOP_TRADE_URL = 'http://58.246.226.99' # This is the test Gateway.
+  self.UPOP_TRADE_URL = 'https://besvr.unionpaysecure.com'
+  self.UPOP_QUERY_URL = 'https://query.unionpaysecure.com'
 ```
 
 ### Generate payment options
@@ -49,7 +50,7 @@ $ bundle install
 
 ### Payment form
 ```ruby
-<form id="union_pay_form" action="<%= Upop.UPOP_TRADE_URL %>/UpopWeb/api/Pay.action" method='POST'>
+<form id="union_pay_form" action="<%= Upop.UPOP_TRADE_URL %>/api/Pay.action" method='POST'>
   <input type="hidden" name='backEndUrl'			value='<%= @options['backEndUrl'] %>'/>
   <input type="hidden" name='charset'				value='<%= @options['charset'] %>'/>
   <input type="hidden" name='customerIp' 		value='<%= @options['customerIp'] %>'/>
