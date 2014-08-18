@@ -1,7 +1,7 @@
 
 A simple upop ruby gem, without unnecessary magic or wrapper, it's directly facing how upop api works.
 
-This gem is just for desktop payment of UnionPay(UPMP).
+This gem is just for desktop payment of UnionPay(UPOP).
 
 ## Installation
 
