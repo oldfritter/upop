@@ -1,5 +1,5 @@
 
-A simple upop ruby gem, without unnecessary magic or wrapper, it's directly facing how upop api works.
+A simple upop ruby gem, without unnecessary magic or wrapper, it's directly facing how UPOP api works.
 
 This gem is just for desktop payment of UnionPay(UPOP).
 
@@ -34,14 +34,14 @@ $ bundle install
 
 ```ruby
       @option = {
-        merId: Upop.store_no, 
-        backEndUrl: orders.first.call_back_url{payment = 'upop'}, 
-        frontEndUrl: orders.first.call_back_url{payment = 'upop'}, 
+        merId: Upop.store_no,
+        backEndUrl: notify_url,
+        frontEndUrl: call_back_url,
         orderTime: Time.now.strftime('%Y%m%d%H%M%S'), 
-        orderNumber: orders.first.payment_sn, 
-        orderAmount: (orders.collect{|order|order.order_total_price}.sum * 100).to_i, 
+        orderNumber: order.number,
+        orderAmount: (order.amount * 100).to_i, 
         orderCurrency: 156, 
-        customerIp: orders.first.customer.ip
+        customerIp: customer.ip
       } # 构建option
       
       @options = Upop::Service.desktop_payment @option
