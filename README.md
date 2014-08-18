@@ -88,7 +88,7 @@ $ bundle install
 
 ### Inquire
 
-```
+```ruby
       @option = {
         merId:        Upmp.store_no,
         orderTime:    order.paid_at.strftime('%Y%m%d%H%M%S'),
