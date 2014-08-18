@@ -30,7 +30,7 @@ $ bundle install
   self.UPOP_QUERY_URL = 'https://query.unionpaysecure.com'
 ```
 
-### Generate payment options
+### Trade
 
 ```ruby
       @option = {
@@ -83,6 +83,19 @@ $ bundle install
       # Do something.
       redirect_to #your success page.
     end
+
+```
+
+### Inquire
+
+```
+      @option = {
+        merId:        Upmp.store_no,
+        orderTime:    order.paid_at.strftime('%Y%m%d%H%M%S'),
+        orderNumber:  order.out_trade_no
+      } # 构建option
+      
+      Upmp::Service.mobile_payment_inquire @option
 
 ```
 
