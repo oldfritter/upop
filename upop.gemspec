@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["leon.zcf@gmail.com"]
   spec.summary       = %q{An simple upop gem}
   spec.description   = %q{An simple upop gem}
-  spec.homepage      = "https://github.com/oldfritter/upop"
+  spec.homepage      = "https://github.com/oldfritter/upop.git"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
