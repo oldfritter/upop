@@ -31,7 +31,7 @@ module Upop
       response = http.request request
       
 
-      CGI.parse(response.body)['transStatus'].first
+      CGI.parse(response.body)['respCode'].first
     end
     
     def self.query_string(options)
